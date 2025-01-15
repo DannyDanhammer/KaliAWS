@@ -18,8 +18,9 @@ chmod +x *.sh
 
     Get your AWS Access Key ID and AWS Secret Access Key from the AWS Management Console.
     Ensure these credentials are available in your AWS CLI configuration or provide them during setup.
+   For instructions see Apdx 1
 
-4. Run the Setup Script
+5. Run the Setup Script
 
 Run the setup_and_connect.sh script to prepare your environment:
 
@@ -128,3 +129,66 @@ Requirements
 License
 
 This project is open-source under the MIT License.
+
+
+
+APDX 1
+Downloading and Installing AWS CLI on Windows and Linux
+On Windows
+
+    Download the Installer:
+        Go to the AWS CLI version 2 download page for Windows.
+        Download the .msi installer.
+
+    Run the Installer:
+        Double-click the downloaded .msi file.
+        Follow the on-screen instructions to complete the installation.
+
+    Verify the Installation:
+        Open Command Prompt or PowerShell and type:
+
+        aws --version
+
+        It should return the installed version of AWS CLI.
+
+    Add AWS CLI to Path (if needed):
+        If aws is not recognized, ensure the installation directory (e.g., C:\Program Files\Amazon\AWSCLIV2\) is in your system's PATH environment variable.
+
+On Linux
+
+    Download the Installer:
+        Open a terminal and run:
+
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+Extract the Files:
+
+    Use unzip to extract the downloaded archive:
+
+    unzip awscliv2.zip
+
+Install AWS CLI:
+
+    Run the installer as a superuser:
+
+    sudo ./aws/install
+
+Verify the Installation:
+
+    Check if the AWS CLI is installed:
+
+    aws --version
+
+    You should see the version number.
+
+Optional Cleanup:
+
+    Remove the downloaded files to save space:
+
+        rm -rf awscliv2.zip aws
+
+Post-Installation Steps
+
+    Set Up AWS Credentials: After installing, configure AWS CLI with your credentials:
+
+aws configure
